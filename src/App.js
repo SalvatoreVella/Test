@@ -18,12 +18,11 @@ const [isBottomPage, setIsBottomPage] = useState(false);
       }
     }
   }
-  useEffect(() => {
+  
     if (isBottomPage) {
       setState(limit + 25)
       setIsBottomPage(false)
     }
-  },[isBottomPage])
 
   const map = users.map((user) => {
     return (<div key={user.id}>
